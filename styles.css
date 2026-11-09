@@ -395,6 +395,14 @@ h1 {
     min-height: 0;
     aspect-ratio: 1375 / 768;
   }
+
+  .hero {
+    align-items: flex-start;
+  }
+
+  .hero__content {
+    padding-top: clamp(17rem, 19vw, min(28rem, calc(100svh - 34rem)));
+  }
 }
 
 @media (max-width: 1024px) {
