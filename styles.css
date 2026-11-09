@@ -1,11 +1,12 @@
 :root {
   color-scheme: dark;
-  --ink: #e7e4d7;
-  --muted: #aaa99d;
-  --paper: #11130f;
-  --panel: #181a15;
-  --olive: #c0a76a;
-  --line: rgb(231 228 215 / 18%);
+  --iron: #c4cac7;
+  --mud: #c99468;
+  --ink: #e2e5e1;
+  --muted: #adb5b0;
+  --paper: #111615;
+  --panel: #19201e;
+  --line: rgb(196 202 199 / 18%);
   font-family: Arial, Helvetica, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,7 +31,7 @@ a {
 }
 
 a:focus-visible {
-  outline: 2px solid var(--olive);
+  outline: 2px solid var(--mud);
   outline-offset: 5px;
 }
 
@@ -60,23 +61,17 @@ a:focus-visible {
 }
 
 .wordmark {
-  font-family: "Arial Narrow", Impact, sans-serif;
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  display: block;
+  flex-shrink: 0;
+  width: clamp(11rem, 23vw, 20rem);
   text-decoration: none;
 }
 
-.wordmark span {
-  color: var(--olive);
-}
-
-.wordmark .wordmark__iron {
-  color: #b7bcb9;
-}
-
-.wordmark .wordmark__mud {
-  color: #b99978;
+.wordmark img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 3px 8px rgb(0 0 0 / 60%));
 }
 
 .site-header nav {
@@ -85,7 +80,7 @@ a:focus-visible {
 }
 
 .site-header nav a {
-  color: rgb(231 228 215 / 82%);
+  color: var(--iron);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.13em;
@@ -95,7 +90,7 @@ a:focus-visible {
 }
 
 .site-header nav a:hover {
-  color: var(--olive);
+  color: var(--mud);
 }
 
 .hero {
@@ -104,7 +99,7 @@ a:focus-visible {
   min-height: min(850px, 100svh);
   align-items: flex-end;
   overflow: hidden;
-  background-color: #292a21;
+  background-color: #29312e;
   background-image: url("lobby_background.png");
   background-position: center 43%;
   background-size: cover;
@@ -121,8 +116,8 @@ a:focus-visible {
 
 .hero__content {
   position: relative;
-  width: min(1040px, 100%);
-  padding: 8rem clamp(1.25rem, 9vw, 9rem) 8rem;
+  width: min(1100px, 100%);
+  padding: 8rem clamp(1.25rem, 9vw, 9rem) 4rem;
 }
 
 .eyebrow {
@@ -130,7 +125,7 @@ a:focus-visible {
   align-items: center;
   gap: 0.75rem;
   margin: 0 0 1.1rem;
-  color: var(--olive);
+  color: var(--mud);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.19em;
@@ -147,6 +142,7 @@ a:focus-visible {
 h1,
 h2 {
   margin: 0;
+  color: var(--iron);
   font-family: "Arial Narrow", Impact, sans-serif;
   font-weight: 700;
   letter-spacing: 0.015em;
@@ -154,16 +150,21 @@ h2 {
   text-transform: uppercase;
 }
 
+h1 span,
+h2 span {
+  color: var(--mud);
+}
+
 h1 {
   max-width: 16ch;
-  font-size: clamp(4.5rem, 8vw, 7.5rem);
+  font-size: clamp(3.2rem, 6vw, 6rem);
   text-shadow: 0 3px 28px rgb(0 0 0 / 45%);
 }
 
 .hero__summary {
   max-width: 30rem;
   margin: 1.5rem 0 1.8rem;
-  color: rgb(231 228 215 / 87%);
+  color: var(--ink);
   font-size: clamp(0.95rem, 1.5vw, 1.1rem);
   line-height: 1.7;
 }
@@ -188,12 +189,12 @@ h1 {
 }
 
 .button--primary {
-  background: var(--olive);
-  color: #14150f;
+  background: var(--mud);
+  color: var(--paper);
 }
 
 .button--primary:hover {
-  background: #d3bd85;
+  background: #deb18b;
 }
 
 .button svg {
@@ -207,7 +208,7 @@ h1 {
 
 .hero__note {
   margin: 0.9rem 0 0;
-  color: rgb(231 228 215 / 65%);
+  color: var(--muted);
   font-size: 0.72rem;
   letter-spacing: 0.05em;
 }
@@ -220,7 +221,7 @@ h1 {
   width: 2.5rem;
   height: 2.5rem;
   place-items: center;
-  border: 1px solid rgb(231 228 215 / 45%);
+  border: 1px solid rgb(196 202 199 / 45%);
   border-radius: 50%;
 }
 
@@ -241,17 +242,13 @@ h1 {
   grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.85fr);
   gap: clamp(3rem, 9vw, 9rem);
   background:
-    radial-gradient(ellipse at 2% 12%, rgb(123 104 56 / 13%), transparent 34rem),
+    radial-gradient(ellipse at 2% 12%, rgb(201 148 104 / 13%), transparent 34rem),
     var(--paper);
 }
 
 .section__heading h2,
 .closing h2 {
   font-size: clamp(3.5rem, 7vw, 6.5rem);
-}
-
-.section__heading h2 span {
-  color: var(--olive);
 }
 
 .gameplay__details {
@@ -281,7 +278,7 @@ h1 {
 }
 
 .feature-list li::marker {
-  color: var(--olive);
+  color: var(--mud);
 }
 
 .trailer {
@@ -300,10 +297,6 @@ h1 {
 
 .section__heading--center h2 {
   font-size: clamp(3rem, 6vw, 5.5rem);
-}
-
-.section__heading--center h2 span {
-  color: var(--olive);
 }
 
 .video-frame {
@@ -332,7 +325,7 @@ h1 {
 
 .video-caption a {
   margin-left: 0.75rem;
-  color: var(--olive);
+  color: var(--mud);
   text-decoration: none;
 }
 
@@ -347,7 +340,7 @@ h1 {
   align-items: center;
   justify-content: center;
   background:
-    linear-gradient(rgb(17 19 15 / 92%), rgb(17 19 15 / 92%)),
+    linear-gradient(rgb(17 22 21 / 92%), rgb(17 22 21 / 92%)),
     url("lobby_background.png") center 60% / cover;
   text-align: center;
 }
@@ -366,11 +359,11 @@ h1 {
   align-items: center;
   gap: 0.7rem 2rem;
   padding: 2rem clamp(1.25rem, 5vw, 5.5rem) 1.4rem;
-  background: #0c0d0b;
+  background: #0c100f;
 }
 
 .wordmark--small {
-  font-size: 1rem;
+  width: 12rem;
 }
 
 .site-footer p {
@@ -388,6 +381,8 @@ h1 {
 
 @media (max-width: 700px) {
   .site-header {
+    flex-wrap: wrap;
+    gap: 1rem;
     padding-top: 1.2rem;
   }
 
@@ -400,8 +395,7 @@ h1 {
   }
 
   .hero {
-    min-height: 42rem;
-    min-height: 92svh;
+    min-height: max(42rem, 92svh);
     align-items: flex-end;
     background-position: 54% center;
   }
