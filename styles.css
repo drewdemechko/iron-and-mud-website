@@ -28,6 +28,10 @@ body {
 }
 
 a {
+  color: var(--iron);
+}
+
+a:not(.button):not(.skip-link):hover {
   color: var(--mud);
 }
 
@@ -81,17 +85,12 @@ a:focus-visible {
 }
 
 .site-header nav a {
-  color: var(--mud);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.13em;
   text-decoration: none;
   text-transform: uppercase;
   transition: color 160ms ease;
-}
-
-.site-header nav a:hover {
-  color: var(--iron);
 }
 
 .hero {
@@ -326,7 +325,6 @@ h1 {
 
 .video-caption a {
   margin-left: 0.75rem;
-  color: var(--mud);
   text-decoration: none;
 }
 
