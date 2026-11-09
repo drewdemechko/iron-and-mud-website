@@ -131,6 +131,12 @@ a:focus-visible {
   }
 }
 
+@media (min-width: 2143px) {
+  .hero {
+    min-height: calc(100vw * 768 / 1375);
+  }
+}
+
 .eyebrow {
   display: flex;
   align-items: center;
