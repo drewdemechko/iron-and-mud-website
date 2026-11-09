@@ -392,7 +392,8 @@ h1 {
 @media (min-width: 2143px) {
   .hero,
   .closing {
-    min-height: calc(100vw * 768 / 1375);
+    min-height: 0;
+    aspect-ratio: 1375 / 768;
   }
 }
 
