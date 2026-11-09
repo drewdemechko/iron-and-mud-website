@@ -131,12 +131,6 @@ a:focus-visible {
   }
 }
 
-@media (min-width: 2143px) {
-  .hero {
-    min-height: calc(100vw * 768 / 1375);
-  }
-}
-
 .eyebrow {
   display: flex;
   align-items: center;
@@ -393,6 +387,13 @@ h1 {
   height: 1px;
   margin-top: 1rem;
   background: var(--line);
+}
+
+@media (min-width: 2143px) {
+  .hero,
+  .closing {
+    min-height: calc(100vw * 768 / 1375);
+  }
 }
 
 @media (max-width: 1024px) {
