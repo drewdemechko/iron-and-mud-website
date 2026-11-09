@@ -8,7 +8,7 @@
   --paper: #111615;
   --panel: #19201e;
   --line: rgb(196 202 199 / 18%);
-  --battle-art: url("lobby_background.png?v=responsive-title");
+  --battle-art: url("lobby_background.png?v=embedded-title");
   font-family: Arial, Helvetica, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -118,17 +118,7 @@ a:focus-visible {
 .hero__content {
   position: relative;
   width: min(1100px, 100%);
-  padding: 17rem clamp(1.25rem, 9vw, 9rem) 4rem;
-}
-
-.hero__title {
-  position: absolute;
-  top: 4.5rem;
-  left: 50%;
-  width: clamp(22rem, 44vw, 40rem);
-  height: auto;
-  transform: translateX(-50%);
-  filter: drop-shadow(0 4px 12px rgb(0 0 0 / 60%));
+  padding: max(17rem, 19vw) clamp(1.25rem, 9vw, 9rem) 4rem;
 }
 
 @media (min-width: 1025px) {
@@ -402,10 +392,6 @@ h1 {
 @media (max-width: 1024px) {
   :root {
     --battle-art: url("lobby_background_portrait.jpg");
-  }
-
-  .hero__title {
-    display: none;
   }
 
   .hero {
