@@ -8,6 +8,7 @@
   --paper: #111615;
   --panel: #19201e;
   --line: rgb(196 202 199 / 18%);
+  --battle-art: url("lobby_background.png");
   font-family: Arial, Helvetica, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -100,7 +101,7 @@ a:focus-visible {
   align-items: flex-end;
   overflow: hidden;
   background-color: #29312e;
-  background-image: url("lobby_background.png");
+  background-image: var(--battle-art);
   background-position: center 43%;
   background-size: cover;
 }
@@ -340,7 +341,7 @@ h1 {
   justify-content: center;
   background:
     linear-gradient(rgb(17 22 21 / 92%), rgb(17 22 21 / 92%)),
-    url("lobby_background.png") center 60% / cover;
+    var(--battle-art) center 60% / cover;
   text-align: center;
 }
 
@@ -378,6 +379,28 @@ h1 {
   background: var(--line);
 }
 
+@media (max-width: 1024px) {
+  :root {
+    --battle-art: url("lobby_background_portrait.jpg");
+  }
+
+  .hero {
+    min-height: max(48rem, 100svh);
+    align-items: flex-start;
+    background-position: center 35%;
+  }
+
+  .hero__shade {
+    background:
+      linear-gradient(180deg, rgb(10 12 10 / 65%) 0%, rgb(10 12 10 / 35%) 45%, transparent 75%),
+      linear-gradient(0deg, rgb(10 12 10 / 45%), transparent 25%);
+  }
+
+  .hero__content {
+    padding-top: 9rem;
+  }
+}
+
 @media (max-width: 700px) {
   .site-header {
     flex-wrap: wrap;
@@ -393,20 +416,8 @@ h1 {
     font-size: 0.65rem;
   }
 
-  .hero {
-    min-height: max(42rem, 92svh);
-    align-items: flex-end;
-    background-position: 54% center;
-  }
-
-  .hero__shade {
-    background:
-      linear-gradient(0deg, rgb(10 12 10 / 90%) 0%, rgb(10 12 10 / 49%) 58%, rgb(10 12 10 / 30%) 100%),
-      linear-gradient(90deg, rgb(10 12 10 / 24%), transparent);
-  }
-
   .hero__content {
-    padding: 7rem 1.5rem 6.5rem;
+    padding: 9rem 1.5rem 4rem;
   }
 
   h1 {
