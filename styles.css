@@ -1,7 +1,8 @@
 :root {
   color-scheme: dark;
-  --iron: #c4cac7;
-  --mud: #c99468;
+  --iron: #ada59d;
+  --mud: #b88863;
+  --ampersand: #c7c3bf;
   --ink: #e2e5e1;
   --muted: #adb5b0;
   --paper: #111615;
@@ -27,7 +28,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--mud);
 }
 
 a:focus-visible {
@@ -80,7 +81,7 @@ a:focus-visible {
 }
 
 .site-header nav a {
-  color: var(--iron);
+  color: var(--mud);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.13em;
@@ -90,7 +91,7 @@ a:focus-visible {
 }
 
 .site-header nav a:hover {
-  color: var(--mud);
+  color: var(--iron);
 }
 
 .hero {
@@ -194,7 +195,7 @@ h1 {
 }
 
 .button--primary:hover {
-  background: #deb18b;
+  background: var(--iron);
 }
 
 .button svg {
@@ -278,7 +279,7 @@ h1 {
 }
 
 .feature-list li::marker {
-  color: var(--mud);
+  color: var(--ampersand);
 }
 
 .trailer {
