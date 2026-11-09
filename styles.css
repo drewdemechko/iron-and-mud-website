@@ -8,7 +8,7 @@
   --paper: #111615;
   --panel: #19201e;
   --line: rgb(196 202 199 / 18%);
-  --battle-art: url("lobby_background.png");
+  --battle-art: url("lobby_background.png?v=titled");
   font-family: Arial, Helvetica, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -97,12 +97,12 @@ a:focus-visible {
 .hero {
   position: relative;
   display: flex;
-  min-height: min(850px, 100svh);
+  min-height: max(48rem, min(850px, 100svh));
   align-items: flex-end;
   overflow: hidden;
   background-color: #29312e;
   background-image: var(--battle-art);
-  background-position: center 43%;
+  background-position: center top;
   background-size: cover;
 }
 
@@ -118,7 +118,7 @@ a:focus-visible {
 .hero__content {
   position: relative;
   width: min(1100px, 100%);
-  padding: 8rem clamp(1.25rem, 9vw, 9rem) 4rem;
+  padding: max(18rem, 22vw) clamp(1.25rem, 9vw, 9rem) 4rem;
 }
 
 .eyebrow {
